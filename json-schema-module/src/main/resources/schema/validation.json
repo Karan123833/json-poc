@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Order Event",
+  "description": "Order event schema for example",
+  "type": "object",
+  "required": ["order_id", "total_price", "products"],
+  "properties": {
+    "order_id": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]{5,10}$",
+      "errorMessage" : {
+        "type": "Must be of string type",
+        "pattern": "must be pattern"
+      }
+    },
+    "event": {
+      "type": "string",
+      "enum": ["PLACED", "DELIVERED", "RETURNED"]
+    },
+    "total_price": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 15
+    },
+    "products": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "required": ["product_id", "price"],
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number",
+            "minimum": 0
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  }
+}

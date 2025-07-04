@@ -1,0 +1,6 @@
+com/example/restapi/config/AppConfiguration.class
+com/example/restapi/controller/PersonController.class
+com/example/restapi/RestApiApplication.class
+com/example/restapi/controller/JsonSchemaController.class
+com/example/restapi/exceptionHandler/GlobalExceptionHandler.class
+com/example/restapi/service/JsonSchemaValidationService.class

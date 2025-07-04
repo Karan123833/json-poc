@@ -1,0 +1,47 @@
+{
+  "$schema": "[http://json-schema.org/draft-07/schema#](http://json-schema.org/draft-07/schema#)",
+  "$id": "classpath:/schema/Person.json",
+  "type": "object",
+  "title": "Person",
+  "description": "A person schema with custom validations",
+  "properties": {
+    "firstName": {
+      "description": "First name of the person",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 35,
+      "x-minLength-message": "First name must be at least 1 character.",
+      "x-maxLength-message": "First name cannot exceed 35 characters."
+    },
+    "lastName": {
+      "description": "Last name of the person",
+      "type": "string",
+      "x-message": "Last name is a required field."
+    },
+    "age": {
+      "description": "Age of the person",
+      "type": "integer",
+      "minimum": 0,
+      "x-minimum-message": "Age cannot be negative."
+    },
+    "email": {
+      "description": "Email address of the person",
+      "x-pattern-message": "Email address must contain an '@' symbol."
+    },
+    "gender": {
+      "description": "Gender of the person",
+      "type": "string",
+      "enum": ["Male", "Female", "Other"],
+      "x-enum-message": "Gender must be Male, Female, or Other."
+    }
+  },
+  "required": ["firstName", "lastName", "age", "email", "gender"],
+  "x-required-message": {
+    "firstName": "First name is mandatory.",
+    "lastName": "Last name is mandatory.",
+    "age": "Age is mandatory.",
+    "email": "Email is mandatory.",
+    "gender": "Gender is mandatory."
+  },
+  "additionalProperties": false
+}

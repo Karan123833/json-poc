@@ -1,0 +1,6 @@
+/home/karan/ShopManagement/json-poc/rest-api-module/src/main/java/com/example/restapi/RestApiApplication.java
+/home/karan/ShopManagement/json-poc/rest-api-module/src/main/java/com/example/restapi/service/JsonSchemaValidationService.java
+/home/karan/ShopManagement/json-poc/rest-api-module/src/main/java/com/example/restapi/exceptionHandler/GlobalExceptionHandler.java
+/home/karan/ShopManagement/json-poc/rest-api-module/src/main/java/com/example/restapi/config/AppConfiguration.java
+/home/karan/ShopManagement/json-poc/rest-api-module/src/main/java/com/example/restapi/controller/PersonController.java
+/home/karan/ShopManagement/json-poc/rest-api-module/src/main/java/com/example/restapi/controller/JsonSchemaController.java
